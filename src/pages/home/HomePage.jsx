@@ -137,7 +137,7 @@ export const HomePage = () => {
         </div>
       </section>
       {/* THE CAROUSEL SECTION */}
-      <section className="bg-gray-100 pt-16 pb-32">
+      <section className="bg-gray-100 mt-24 pt-16 pb-32">
         <div>
           <h1 className="font-semibold text-3xl text-black text-center mt-12 mb-12">
             Recent Drops
