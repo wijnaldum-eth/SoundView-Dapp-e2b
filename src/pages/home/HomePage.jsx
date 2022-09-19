@@ -12,7 +12,7 @@ export const HomePage = () => {
   return (
     <div className="font-Manrope">
       {/* FIRST SECTION WITH THE HERO TEXT AND SUB HERO TEXT */}
-      <section className="flex flex-col items-center p-[45px] pt-32">
+      <section className="flex flex-col items-center p-[25px] sm:p-[45px] pt-24 sm:pt-32">
         <h1 className="font-medium text-5xl text-black text-center mt-24 mb-12">
           Discover, Buy, Collect and Sell <br /> your NFTs at Soundview
         </h1>
@@ -25,9 +25,9 @@ export const HomePage = () => {
         </button>
       </section>
       {/* THE BLIND SECTION */}
-      <section className="p-[45px] relative">
+      <section className="sm:p-[45px] p-[25px] relative">
         <div className="flex flex-row items-end gap-4 h-[35rem]">
-          <div className="animate-[bounce_3.4s_infinite_100ms]">
+          <div className="animate-[bounce_3.4s_infinite_100ms] hidden sm:block">
             <img
               className="rounded-lg "
               src="https://images.unsplash.com/photo-1600600423621-70c9f4416ae9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80"
@@ -55,7 +55,7 @@ export const HomePage = () => {
               alt="music"
             />
           </div>
-          <div className="animate-[bounce_2.8s_infinite_300ms]">
+          <div className="animate-[bounce_2.8s_infinite_300ms] hidden sm:block">
             <img
               className="rounded-lg"
               src="https://images.unsplash.com/photo-1600600423621-70c9f4416ae9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80"
@@ -63,7 +63,7 @@ export const HomePage = () => {
             />
           </div>
         </div>
-        <div className="bg-white h-40 w-[96%] absolute bottom-10"></div>
+        <div className="bg-white h-20 sm:h-40 w-[98%] sm:w-[96%] absolute bottom-10"></div>
       </section>
       {/* TOP MUSICS SECTION */}
       <section className="pb-32">
@@ -72,7 +72,7 @@ export const HomePage = () => {
             Top Musics
           </h1>
         </div>
-        <div className="flex sm:flex-row items-center justify-evenly ">
+        <div className="flex flex-col sm:flex-row items-center gap-6 sm:justify-evenly ">
           {[1, 2, 3].map((i) => {
             return <Card />;
           })}
@@ -83,7 +83,7 @@ export const HomePage = () => {
         <h1 className="font-semibold text-3xl text-black text-center mt-12 mb-12">
           Create and Sell your Music NFTs
         </h1>
-        <div className="flex sm:flex-row w-full justify-between h-52">
+        <div className="flex flex-col sm:flex-row w-full gap-4 sm:justify-between h-52">
           <div className="flex flex-col items-center justify-between h-full w-1/5">
             <div className="w-14 h-14 m-4">
               <CryptoWallet />
