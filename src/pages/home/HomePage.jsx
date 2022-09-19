@@ -63,7 +63,7 @@ export const HomePage = () => {
             />
           </div>
         </div>
-        <div className="bg-white h-20 sm:h-40 w-[98%] sm:w-[96%] absolute bottom-10"></div>
+        <div className="bg-white h-40 w-[98%] sm:w-[96%] absolute bottom-10"></div>
       </section>
       {/* TOP MUSICS SECTION */}
       <section className="pb-32">
@@ -143,7 +143,7 @@ export const HomePage = () => {
             Recent Drops
           </h1>
         </div>
-        <div className="flex sm:flex-row items-center justify-evenly ">
+        <div className="flex flex-col sm:flex-row items-center sm:justify-evenly ">
           {[1, 2, 3].map((i) => {
             return <Card />;
           })}
