@@ -79,12 +79,12 @@ export const HomePage = () => {
         </div>
       </section>
       {/* THE ICONS SECTION */}
-      <section className="w-full p-[65px] mb-20">
+      <section className="w-full p-[25px] sm:p-[65px] mb-20">
         <h1 className="font-semibold text-3xl text-black text-center mt-12 mb-12">
           Create and Sell your Music NFTs
         </h1>
         <div className="flex flex-col sm:flex-row w-full gap-4 sm:justify-between h-52">
-          <div className="flex flex-col items-center justify-between h-full w-1/5">
+          <div className="flex flex-col items-center justify-between h-full sm:w-1/5">
             <div className="w-14 h-14 m-4">
               <CryptoWallet />
             </div>
@@ -97,7 +97,7 @@ export const HomePage = () => {
               Learn about the wallets we support.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-between h-full w-1/5">
+          <div className="flex flex-col items-center justify-between h-full sm:w-1/5">
             <div className="w-14 h-14 m-4">
               <MusicCart />
             </div>
@@ -110,7 +110,7 @@ export const HomePage = () => {
               fee.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-between h-full w-1/5">
+          <div className="flex flex-col items-center justify-between h-full sm:w-1/5">
             <div className="w-14 h-14 m-4">
               <AddFiles />
             </div>
@@ -121,7 +121,7 @@ export const HomePage = () => {
               unlockable content.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-between h-full w-1/5">
+          <div className="flex flex-col items-center justify-between h-full sm:w-1/5">
             <div className="w-14 h-14 m-4">
               <Clipboard />
             </div>
