@@ -79,7 +79,7 @@ export const HomePage = () => {
         </div>
       </section>
       {/* THE ICONS SECTION */}
-      <section className="w-full p-[25px] sm:p-[65px] mb-20">
+      <section className="w-full p-[25px] sm:p-[65px] mb-40 sm:mb-20">
         <h1 className="font-semibold text-3xl text-black text-center mt-12 mb-12">
           Create and Sell your Music NFTs
         </h1>
@@ -137,13 +137,13 @@ export const HomePage = () => {
         </div>
       </section>
       {/* THE CAROUSEL SECTION */}
-      <section className="bg-gray-100 mt-24 pt-16 pb-32">
+      <section className="bg-gray-100 mt-32 sm:mt-8 pt-16 pb-32">
         <div>
           <h1 className="font-semibold text-3xl text-black text-center mt-12 mb-12">
             Recent Drops
           </h1>
         </div>
-        <div className="flex flex-col sm:flex-row items-center sm:justify-evenly ">
+        <div className="flex flex-col sm:flex-row items-center gap-3 sm:justify-evenly ">
           {[1, 2, 3].map((i) => {
             return <Card />;
           })}
@@ -156,12 +156,12 @@ export const HomePage = () => {
             Discover by Album
           </h1>
         </div>
-        <div className="flex sm:flex-row items-center justify-evenly mb-14 ">
+        <div className="flex flex-col gap-3 sm:flex-row items-center justify-evenly mb-14 ">
           {[1, 2, 3].map((i) => {
             return <Card />;
           })}
         </div>
-        <div className="flex sm:flex-row items-center justify-evenly mb-14 ">
+        <div className="flex flex-col gap-3 sm:flex-row items-center justify-evenly mb-14 ">
           {[1, 2, 3].map((i) => {
             return <Card />;
           })}
@@ -174,7 +174,7 @@ export const HomePage = () => {
             Top Trends in all Genres
           </h1>
         </div>
-        <div className="flex flex-row w-full justify-between pl-12 pr-12 mb-12 text-black font-semibold">
+        <div className="flex flex-row w-full justify-between pl-6 sm:pl-12 pr-6 sm:pr-12 mb-12 text-black text-xs sm:text-base font-semibold">
           <div className="w-24 flex flex-row justify-start">Ranking</div>
           <div className="w-24 flex flex-row justify-start">Name</div>
           <div className="w-24 flex flex-row justify-start">Artists</div>
@@ -207,8 +207,8 @@ export const HomePage = () => {
         </div>
       </section>
       <section className="bg-themePinkWhite p-12">
-        <div className="flex flex-row w-full">
-          <div className="w-[70%]">
+        <div className="flex flex-col sm:flex-row w-full">
+          <div className="sm:w-[70%] w-full">
             <h1 className="font-semibold text-4xl text-black text-center mt-12 mb-12">
               Get to know more about Soundview
             </h1>
@@ -235,14 +235,14 @@ export const HomePage = () => {
               </button>
             </div>
           </div>
-          <div>
+          <div className="">
             <Newsletter />
           </div>
         </div>
       </section>
       <footer className=" bg-themeRed text-white p-12 w-full">
-        <div className="flex sm:flex-row">
-          <div className="sm:w-[30%] mr-56">
+        <div className="flex flex-col sm:flex-row">
+          <div className="sm:w-[30%] w-full sm:mr-56">
             <LogoWhite />
             <h1 className="text-bold text-4xl mb-6">Soundview</h1>
             <p className="mb-6 text-xs font-extralight text-justify">
@@ -254,7 +254,7 @@ export const HomePage = () => {
               <Discord />
             </div>
           </div>
-          <div className="flex sm:flex-row gap-10 mt-20 text-white">
+          <div className="flex flex-col sm:flex-row gap-10 mt-20 text-white">
             <div className="flex flex-row gap-10 text-white">
               <div>
                 <h1 className="text-bold text-xl">Market place</h1>
