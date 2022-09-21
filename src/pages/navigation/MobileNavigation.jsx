@@ -12,7 +12,7 @@ export const MobileNavigation = () => {
 
   return (
     <div className="flex flex-col sm:hidden w-full bg-white shadow-md fixed z-50">
-      <div className="flex flex-row items-center justify-between px-4 py-8 w-full">
+      <div className="flex flex-row items-center justify-between px-4 py-2 w-full">
         <SoundViewLogoMobile />
         <button
           className="text-bold text-4xl font-black pr-2"
