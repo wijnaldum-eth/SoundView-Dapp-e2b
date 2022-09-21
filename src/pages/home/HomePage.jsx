@@ -244,29 +244,28 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
-      <footer className=" bg-themeRed text-white p-12 w-full">
+      <footer className=" bg-themeRed text-white p-8 sm:p-12 w-full">
         <div className="flex flex-col sm:flex-row">
           <div className="sm:w-[30%] w-full sm:mr-56">
             <img
               src={soundviewwhite}
               alt="whitelogo"
-              style={{ width: "200px", height: "auto" }}
+              className="sm:w-[200px] w-[100px] h-auto"
             />
-            <h1 className="text-bold text-4xl mb-6">Soundview</h1>
-            <p className="mb-6 text-xs font-extralight text-justify">
+            <h1 className="text-bold text-4xl mb-4 sm:mb-6">Soundview</h1>
+            <p className="sm:mb-6 mb-2 text-xs font-extralight text-justify">
               SoundView is the finest Afro centered Music NFT Marketplace where
               fans can stream to earn along side their favorite artist
             </p>
-            <h1 className="pt-6">Join our various communities</h1>
+            <h1 className="sm:pt-6 pt-3">Join our various communities</h1>
             <div className="flex flex-row gap-3 mt-1">
               <Discord />
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-10 mt-20 text-white">
-            <div className="flex flex-row gap-10 text-white">
-              <div>
-                <h1 className="text-bold text-xl">Market place</h1>
-                <br />
+          <div className="flex flex-col sm:flex-row gap-14 sm:mt-20 mt-10 text-white">
+            <div className="flex flex-row sm:gap-24 w-full justify-between text-white">
+              <div className="flex flex-col gap-2">
+                <h1 className="text-bold text-xl">Market Place</h1>
                 <p className="text-xs font-extralight">All NFTs</p>
                 <p className="text-xs font-extralight">Afrobeats</p>
                 <p className="text-xs font-extralight">Afrofusion</p>
@@ -275,27 +274,24 @@ export const HomePage = () => {
                 <p className="text-xs font-extralight">Hip hop</p>
                 <p className="text-xs font-extralight">Gospel</p>
               </div>
-              <div>
-                <h1 className="text-bold text-xl">My account</h1>
-                <br />
+              <div className="flex flex-col gap-2">
+                <h1 className="text-bold text-xl">My Account</h1>
                 <p className="text-xs font-extralight">Profile</p>
                 <p className="text-xs font-extralight">Favorite</p>
                 <p className="text-xs font-extralight">Watch list</p>
                 <p className="text-xs font-extralight">My Collections</p>
               </div>
             </div>
-            <div className="flex flex-row gap-10 text-white">
-              <div>
+            <div className="flex flex-row sm:gap-24 w-full justify-between text-white">
+              <div className="flex flex-col gap-2">
                 <h1 className="text-bold text-xl">Partners</h1>
-                <br />
                 <p className="text-xs font-extralight">
-                  Decentralized Exchange LTD
+                  Decentralized <br /> Exchange LTD
                 </p>
                 <p className="text-xs font-extralight">World View Records</p>
               </div>
-              <div>
+              <div className="flex flex-col gap-2">
                 <h1 className="text-bold text-xl">Company</h1>
-                <br />
                 <p className="text-xs font-extralight">Docs</p>
                 <p className="text-xs font-extralight">Careers</p>
                 <p className="text-xs font-extralight">Contact Us</p>
