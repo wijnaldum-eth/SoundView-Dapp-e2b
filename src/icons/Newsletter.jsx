@@ -4,8 +4,8 @@ export const Newsletter = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="400"
-      height="400"
+      width="300"
+      height="300"
       viewBox="0 0 64 64"
     >
       <g data-name="Stroke copy 3">

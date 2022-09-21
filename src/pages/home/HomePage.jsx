@@ -12,7 +12,7 @@ export const HomePage = () => {
   return (
     <div className="font-Manrope">
       {/* FIRST SECTION WITH THE HERO TEXT AND SUB HERO TEXT */}
-      <section className="flex flex-col items-center p-[25px] sm:p-[45px] pt-24 sm:pt-32">
+      <section className="flex flex-col items-center w-full p-[25px] sm:p-[45px] pt-24 sm:pt-32">
         <h1 className="font-medium text-5xl text-black text-center mt-24 mb-12">
           Discover, Buy, Collect and Sell <br /> your NFTs at Soundview
         </h1>
@@ -25,7 +25,7 @@ export const HomePage = () => {
         </button>
       </section>
       {/* THE BLIND SECTION */}
-      <section className="sm:p-[45px] p-[25px] relative">
+      <section className="sm:p-[45px] p-[25px] w-full relative">
         <div className="flex flex-row items-end gap-4 h-[35rem]">
           <div className="animate-[bounce_3.4s_infinite_100ms] hidden sm:block">
             <img
@@ -66,7 +66,7 @@ export const HomePage = () => {
         <div className="bg-white h-40 w-[98%] sm:w-[96%] absolute bottom-10"></div>
       </section>
       {/* TOP MUSICS SECTION */}
-      <section className="pb-32">
+      <section className="pb-32 w-full">
         <div>
           <h1 className="font-semibold text-3xl text-black text-center mt-12 mb-12">
             Top Musics
@@ -79,7 +79,7 @@ export const HomePage = () => {
         </div>
       </section>
       {/* THE ICONS SECTION */}
-      <section className="w-full p-[25px] sm:p-[65px] mb-40 sm:mb-20">
+      <section className="w-full mb-40 sm:mb-20 p-[25px] sm:p-[65px] ">
         <h1 className="font-semibold text-3xl text-black text-center mt-12 mb-12">
           Create and Sell your Music NFTs
         </h1>
@@ -91,7 +91,7 @@ export const HomePage = () => {
             <h1 className="font-bold text-xl text-black mb-4">
               Set up your wallet
             </h1>
-            <p className="text-sm text-justify">
+            <p className="text-sm text-center sm:text-justify">
               Once you&apos;ve set up your wallet of choice, connect it to
               SoundView by clicking the wallet icon in the top right corner.
               Learn about the wallets we support.
@@ -104,7 +104,7 @@ export const HomePage = () => {
             <h1 className="font-bold text-xl text-black mb-4 text-center">
               Create your collection
             </h1>
-            <p className="text-sm text-justify">
+            <p className="text-sm text-center sm:text-justify">
               Click My Collections and set up your collection. Add social links,
               a description, profile & banner images, and set a secondary sales
               fee.
@@ -115,7 +115,7 @@ export const HomePage = () => {
               <AddFiles />
             </div>
             <h1 className="font-bold text-xl text-black mb-4">Add your NFTs</h1>
-            <p className="text-sm text-justify">
+            <p className="text-sm text-center sm:text-justify">
               Upload your work (image, video, audio, or 3D art), add a title and
               description, and customize your NFTs with properties, stats, and
               unlockable content.
@@ -128,7 +128,7 @@ export const HomePage = () => {
             <h1 className="font-bold text-xl text-black mb-4">
               List them for sale
             </h1>
-            <p className="text-sm text-justify">
+            <p className="text-sm text-center sm:text-justify">
               Choose between auctions, fixed-price listings, and declining-price
               listings. You choose how you want to sell your NFTs, and we help
               you sell them!
@@ -137,7 +137,7 @@ export const HomePage = () => {
         </div>
       </section>
       {/* THE CAROUSEL SECTION */}
-      <section className="bg-gray-100 mt-32 sm:mt-8 pt-16 pb-32">
+      <section className="bg-gray-100 w-full mt-[40rem] sm:mt-8 pt-16 pb-32">
         <div>
           <h1 className="font-semibold text-3xl text-black text-center mt-12 mb-12">
             Recent Drops
@@ -150,7 +150,7 @@ export const HomePage = () => {
         </div>
       </section>
       {/* THE DISCOVER SECTION */}
-      <section className="bg-gray-100 pt-16 pb-32">
+      <section className="bg-gray-100 w-full pt-16 pb-32">
         <div>
           <h1 className="font-semibold text-3xl text-black text-center mt-12 mb-12">
             Discover by Album
@@ -168,7 +168,7 @@ export const HomePage = () => {
         </div>
       </section>
       {/* THE RANKINGS LIST */}
-      <section className="pt-16 pb-32">
+      <section className="pt-16 pb-32 w-full">
         <div>
           <h1 className="font-semibold text-3xl text-black text-center mt-12 mb-16">
             Top Trends in all Genres
@@ -206,7 +206,7 @@ export const HomePage = () => {
           </button>
         </div>
       </section>
-      <section className="bg-themePinkWhite p-12">
+      <section className="bg-themePinkWhite p-12 w-full">
         <div className="flex flex-col sm:flex-row w-full">
           <div className="sm:w-[70%] w-full">
             <h1 className="font-semibold text-4xl text-black text-center mt-12 mb-12">
