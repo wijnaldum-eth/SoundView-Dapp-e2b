@@ -7,6 +7,7 @@ import { Card } from "./home-carousel/carousel";
 import { Newsletter } from "../../icons/Newsletter";
 import { Discord } from "../../icons/Discord";
 import soundviewwhite from "../../icons/soundviewwhite.png";
+import { RankingsMobile } from "./rankings-mobile/RankingsMobile";
 
 export const HomePage = () => {
   return (
@@ -137,7 +138,7 @@ export const HomePage = () => {
         </div>
       </section>
       {/* THE CAROUSEL SECTION */}
-      <section className="bg-gray-100 w-full mt-[40rem] sm:mt-8 pt-16 pb-32">
+      <section className="bg-gray-100 w-full mt-[50rem] sm:mt-8 pt-16 pb-32">
         <div>
           <h1 className="font-semibold text-3xl text-black text-center mt-12 mb-12">
             Recent Drops
@@ -174,7 +175,10 @@ export const HomePage = () => {
             Top Trends in all Genres
           </h1>
         </div>
-        <div className="flex flex-row w-full justify-between pl-6 sm:pl-12 pr-6 sm:pr-12 mb-12 text-black text-xs sm:text-base font-semibold">
+        {[1, 2, 3, 4, 5, 6, 7].map((i) => {
+          return <RankingsMobile />;
+        })}
+        <div className="hidden sm:flex flex-row w-full justify-between pl-6 sm:pl-12 pr-6 sm:pr-12 mb-12 text-black text-xs sm:text-base font-semibold">
           <div className="w-24 flex flex-row justify-start">Ranking</div>
           <div className="w-24 flex flex-row justify-start">Name</div>
           <div className="w-24 flex flex-row justify-start">Artists</div>
@@ -185,7 +189,7 @@ export const HomePage = () => {
         </div>
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => {
           return (
-            <div className="flex flex-row w-full justify-between pl-12 pr-12 mb-8 text-xs font-semibold">
+            <div className="hidden sm:flex flex-row w-full justify-between pl-12 pr-12 mb-8 text-xs font-semibold">
               <div className="w-24 flex flex-row justify-start">1</div>
               <div className="w-24 flex flex-row justify-start">Soundview</div>
               <div className="w-24 flex flex-row justify-start">
