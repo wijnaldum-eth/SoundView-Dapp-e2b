@@ -63,7 +63,7 @@ export const HomePage = () => {
             />
           </div>
         </div>
-        <div className="bg-white h-24 w-[calc(100vw-15px)] sm:w-[96%] absolute bottom-20"></div>
+        <div className="bg-white h-24 w-[calc(100vw-15px)] sm:w-[96%] absolute bottom-14"></div>
       </section>
       {/* TOP MUSICS SECTION */}
       <section className="pb-32 w-full">

@@ -1,23 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { SoundViewLogoMobile } from "../../icons/Logo";
 import { Search } from "../../icons/Search";
 
 export const MobileNavigation = () => {
-  //   const [show, setShow] = useState("hidden");
+  const [navbarOpen, setNavbarOpen] = useState(false);
 
-  //   useEffect(() => {
-  //     const show = "flex";
-  //     const toggleNav = () => {
-  //       setShow(show);
-  //     };
-
-  //     toggleNav();
-  //   }, []);
-
-  let show = "hidden";
   const toggleNav = () => {
-    return (show = "flex");
+    setNavbarOpen(!navbarOpen);
   };
 
   return (
@@ -31,7 +21,9 @@ export const MobileNavigation = () => {
           ☰
         </button>
       </div>
-      <div className={`${show} flex-col px-4 w-full`}>
+      <div
+        className={` ${navbarOpen ? "flex" : "hidden"} flex-col px-4 w-full`}
+      >
         <div className="input-group flex flex-row items-center justify-between w-full mb-4">
           <input
             type="search"
