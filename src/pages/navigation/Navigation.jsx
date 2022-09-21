@@ -2,11 +2,13 @@ import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import { SoundViewLogo } from "../../icons/Logo";
 import { Search } from "../../icons/Search";
+import { MobileNavigation } from "./MobileNavigation";
 
 export const Navigation = () => {
   return (
     <>
-      <div className="sm:h-32 sm:w-full flex flex-row items-end shadow-sm justify-between p-[45px] pt-28 sm:fixed z-50 bg-white">
+      <MobileNavigation />
+      <div className="sm:h-32 hidden sm:w-full sm:flex flex-row items-end shadow-sm justify-between sm:p-[45px] pt-28 sm:fixed z-50 bg-white">
         <div className="w-[15%]">
           <SoundViewLogo />
         </div>

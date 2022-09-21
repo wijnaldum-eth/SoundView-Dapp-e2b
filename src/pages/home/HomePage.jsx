@@ -25,8 +25,8 @@ export const HomePage = () => {
         </button>
       </section>
       {/* THE BLIND SECTION */}
-      <section className="sm:p-[45px] p-[25px] w-full relative">
-        <div className="flex flex-row items-end gap-4 h-[35rem]">
+      <section className="sm:p-[45px] p-[10px] w-full relative">
+        <div className="flex flex-row p-1 items-end sm:gap-4 gap-2 h-[35rem]">
           <div className="animate-[bounce_3.4s_infinite_100ms] hidden sm:block">
             <img
               className="rounded-lg "
@@ -63,7 +63,7 @@ export const HomePage = () => {
             />
           </div>
         </div>
-        <div className="bg-white h-40 w-[98%] sm:w-[96%] absolute bottom-10"></div>
+        <div className="bg-white h-24 w-[calc(100vw-15px)] sm:w-[96%] absolute bottom-20"></div>
       </section>
       {/* TOP MUSICS SECTION */}
       <section className="pb-32 w-full">
