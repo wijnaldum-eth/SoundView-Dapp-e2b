@@ -6,7 +6,7 @@ import { Clipboard } from "../../icons/Clipboard";
 import { Card } from "./home-carousel/carousel";
 import { Newsletter } from "../../icons/Newsletter";
 import { Discord } from "../../icons/Discord";
-import { LogoWhite } from "../../icons/LogoWhite";
+import soundviewwhite from "../../icons/soundviewwhite.png";
 
 export const HomePage = () => {
   return (
@@ -243,7 +243,11 @@ export const HomePage = () => {
       <footer className=" bg-themeRed text-white p-12 w-full">
         <div className="flex flex-col sm:flex-row">
           <div className="sm:w-[30%] w-full sm:mr-56">
-            <LogoWhite />
+            <img
+              src={soundviewwhite}
+              alt="whitelogo"
+              style={{ width: "200px", height: "auto" }}
+            />
             <h1 className="text-bold text-4xl mb-6">Soundview</h1>
             <p className="mb-6 text-xs font-extralight text-justify">
               SoundView is the finest Afro centered Music NFT Marketplace where

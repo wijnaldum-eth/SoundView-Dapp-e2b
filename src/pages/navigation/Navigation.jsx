@@ -10,7 +10,7 @@ export const Navigation = () => {
         <div className="w-[15%]">
           <SoundViewLogo />
         </div>
-        <div className="w-[48%]">
+        <div className="w-[38%]">
           <div className="mb-3">
             <div className="input-group flex flex-row items-center justify-between w-full mb-4">
               <input
@@ -30,7 +30,7 @@ export const Navigation = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-row items-center justify-evenly w-[25%] text-black font-semibold mb-7">
+        <div className="flex flex-row items-center justify-evenly w-[35%] text-black font-semibold mb-7">
           <button className="hover:text-themeRed active:text-themeRed focus:text-themeRed">
             <Link to="/">Home</Link>
           </button>
@@ -39,6 +39,9 @@ export const Navigation = () => {
           </button>
           <button className="hover:text-themeRed focus:text-themeRed active:text-themeRed">
             <Link to="/stream">Stream</Link>
+          </button>
+          <button className="hover:text-themeRed focus:text-themeRed active:text-themeRed">
+            <Link to="/market">Market Place</Link>
           </button>
           <button className="hover:text-themeRed focus:text-themeRed active:text-themeRed">
             <Link to="/create">Create</Link>
