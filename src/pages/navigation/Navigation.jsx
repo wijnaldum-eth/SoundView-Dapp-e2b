@@ -1,8 +1,10 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
-import { SoundViewLogo } from "../../icons/Logo";
+import soundviewlogo from "../../icons/soundviewlogo.png";
 import { Search } from "../../icons/Search";
 import { MobileNavigation } from "./MobileNavigation";
+import { Discord } from "../../icons/Discord";
+import soundviewwhite from "../../icons/soundviewwhite.png";
 
 export const Navigation = () => {
   return (
@@ -10,7 +12,11 @@ export const Navigation = () => {
       <MobileNavigation />
       <div className="sm:h-32 hidden sm:w-full sm:flex flex-row items-end shadow-sm justify-between sm:p-[45px] pt-28 sm:fixed z-50 bg-white">
         <div className="w-[15%]">
-          <SoundViewLogo />
+          <img
+            src={soundviewlogo}
+            alt="soundview logo"
+            className="sm:w-[70%] sm:pt-8 sm:h-auto"
+          />
         </div>
         <div className="w-[38%]">
           <div className="mb-3">
@@ -55,9 +61,75 @@ export const Navigation = () => {
           </button>
         </div>
       </div>
-      <div className="h-[100vh]">
+      <div className="">
         <Outlet />
       </div>
+      <footer className=" bg-themeRed text-white p-8 sm:p-12 w-full">
+        <div className="flex flex-col sm:flex-row">
+          <div className="sm:w-[30%] w-full sm:mr-56">
+            <img
+              src={soundviewwhite}
+              alt="whitelogo"
+              className="sm:w-[200px] w-[100px] h-auto"
+            />
+            <h1 className="text-bold text-4xl mb-4 sm:mb-6">Soundview</h1>
+            <p className="sm:mb-6 mb-2 text-xs font-extralight text-justify">
+              SoundView is the finest Afro centered Music NFT Marketplace where
+              fans can stream to earn along side their favorite artist
+            </p>
+            <h1 className="sm:pt-6 pt-3">Join our various communities</h1>
+            <div className="flex flex-row gap-3 mt-1">
+              <Discord />
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-14 sm:mt-20 mt-10 text-white">
+            <div className="flex flex-row sm:gap-24 w-full justify-between text-white">
+              <div className="flex flex-col gap-2">
+                <h1 className="text-bold text-xl">Market Place</h1>
+                <p className="text-xs font-extralight">All NFTs</p>
+                <p className="text-xs font-extralight">Afrobeats</p>
+                <p className="text-xs font-extralight">Afrofusion</p>
+                <p className="text-xs font-extralight">AfroTrap</p>
+                <p className="text-xs font-extralight">Afro pop</p>
+                <p className="text-xs font-extralight">Hip hop</p>
+                <p className="text-xs font-extralight">Gospel</p>
+              </div>
+              <div className="flex flex-col gap-2">
+                <h1 className="text-bold text-xl">My Account</h1>
+                <p className="text-xs font-extralight">Profile</p>
+                <p className="text-xs font-extralight">Favorite</p>
+                <p className="text-xs font-extralight">Watch list</p>
+                <p className="text-xs font-extralight">My Collections</p>
+              </div>
+            </div>
+            <div className="flex flex-row sm:gap-24 w-full justify-between text-white">
+              <div className="flex flex-col gap-2">
+                <h1 className="text-bold text-xl">Partners</h1>
+                <p className="text-xs font-extralight">
+                  Decentralized <br /> Exchange LTD
+                </p>
+                <p className="text-xs font-extralight">World View Records</p>
+              </div>
+              <div className="flex flex-col gap-2">
+                <h1 className="text-bold text-xl">Company</h1>
+                <p className="text-xs font-extralight">Docs</p>
+                <p className="text-xs font-extralight">Careers</p>
+                <p className="text-xs font-extralight">Contact Us</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr className="w-full mt-8 pt-3" />
+        <div className="w-full flex flex-row items-center justify-between">
+          <p className="text-xs font-extralight">
+            ©️All copyrights are reserved
+          </p>
+          <div className="flex flex-row gap-4">
+            <p className="text-xs font-extralight">Privacy policy</p>
+            <p className="text-xs font-extralight">Terms of service</p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 };

@@ -2,9 +2,9 @@ import React from "react";
 
 export const Card = () => {
   return (
-    <div className="rounded-lg shadow-lg bg-white max-w-sm">
+    <div className="rounded-2xl shadow-lg bg-white max-w-sm">
       <img
-        className="rounded-t-lg"
+        className="rounded-t-2xl"
         src="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
         alt="soundview"
       />

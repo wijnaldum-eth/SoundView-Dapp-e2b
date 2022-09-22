@@ -5,8 +5,6 @@ import { MusicCart } from "../../icons/MusicCart";
 import { Clipboard } from "../../icons/Clipboard";
 import { Card } from "./home-carousel/carousel";
 import { Newsletter } from "../../icons/Newsletter";
-import { Discord } from "../../icons/Discord";
-import soundviewwhite from "../../icons/soundviewwhite.png";
 import { RankingsMobile } from "./rankings-mobile/RankingsMobile";
 
 export const HomePage = () => {
@@ -64,7 +62,7 @@ export const HomePage = () => {
             />
           </div>
         </div>
-        <div className="bg-white h-24 w-[calc(100vw-15px)] sm:w-[96%] absolute bottom-14"></div>
+        <div className="bg-white h-24 sm:h-40 w-[calc(100vw-15px)] sm:w-[96%] absolute sm:bottom-10 bottom-14"></div>
       </section>
       {/* TOP MUSICS SECTION */}
       <section className="pb-32 w-full">
@@ -157,12 +155,12 @@ export const HomePage = () => {
             Discover by Album
           </h1>
         </div>
-        <div className="flex flex-col gap-3 sm:flex-row items-center justify-evenly mb-14 ">
+        <div className="flex flex-col gap-10 sm:flex-row items-center justify-evenly mb-14 ">
           {[1, 2, 3].map((i) => {
             return <Card />;
           })}
         </div>
-        <div className="flex flex-col gap-3 sm:flex-row items-center justify-evenly mb-14 ">
+        <div className="flex flex-col gap-10 sm:flex-row items-center justify-evenly mb-14 ">
           {[1, 2, 3].map((i) => {
             return <Card />;
           })}
@@ -244,72 +242,6 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
-      <footer className=" bg-themeRed text-white p-8 sm:p-12 w-full">
-        <div className="flex flex-col sm:flex-row">
-          <div className="sm:w-[30%] w-full sm:mr-56">
-            <img
-              src={soundviewwhite}
-              alt="whitelogo"
-              className="sm:w-[200px] w-[100px] h-auto"
-            />
-            <h1 className="text-bold text-4xl mb-4 sm:mb-6">Soundview</h1>
-            <p className="sm:mb-6 mb-2 text-xs font-extralight text-justify">
-              SoundView is the finest Afro centered Music NFT Marketplace where
-              fans can stream to earn along side their favorite artist
-            </p>
-            <h1 className="sm:pt-6 pt-3">Join our various communities</h1>
-            <div className="flex flex-row gap-3 mt-1">
-              <Discord />
-            </div>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-14 sm:mt-20 mt-10 text-white">
-            <div className="flex flex-row sm:gap-24 w-full justify-between text-white">
-              <div className="flex flex-col gap-2">
-                <h1 className="text-bold text-xl">Market Place</h1>
-                <p className="text-xs font-extralight">All NFTs</p>
-                <p className="text-xs font-extralight">Afrobeats</p>
-                <p className="text-xs font-extralight">Afrofusion</p>
-                <p className="text-xs font-extralight">AfroTrap</p>
-                <p className="text-xs font-extralight">Afro pop</p>
-                <p className="text-xs font-extralight">Hip hop</p>
-                <p className="text-xs font-extralight">Gospel</p>
-              </div>
-              <div className="flex flex-col gap-2">
-                <h1 className="text-bold text-xl">My Account</h1>
-                <p className="text-xs font-extralight">Profile</p>
-                <p className="text-xs font-extralight">Favorite</p>
-                <p className="text-xs font-extralight">Watch list</p>
-                <p className="text-xs font-extralight">My Collections</p>
-              </div>
-            </div>
-            <div className="flex flex-row sm:gap-24 w-full justify-between text-white">
-              <div className="flex flex-col gap-2">
-                <h1 className="text-bold text-xl">Partners</h1>
-                <p className="text-xs font-extralight">
-                  Decentralized <br /> Exchange LTD
-                </p>
-                <p className="text-xs font-extralight">World View Records</p>
-              </div>
-              <div className="flex flex-col gap-2">
-                <h1 className="text-bold text-xl">Company</h1>
-                <p className="text-xs font-extralight">Docs</p>
-                <p className="text-xs font-extralight">Careers</p>
-                <p className="text-xs font-extralight">Contact Us</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr className="w-full mt-8 pt-3" />
-        <div className="w-full flex flex-row items-center justify-between">
-          <p className="text-xs font-extralight">
-            ©️All copyrights are reserved
-          </p>
-          <div className="flex flex-row gap-4">
-            <p className="text-xs font-extralight">Privacy policy</p>
-            <p className="text-xs font-extralight">Terms of service</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
