@@ -18,7 +18,7 @@ export const MobileNavigation = () => {
           className="text-bold text-4xl font-black pr-2"
           onClick={() => toggleNav()}
         >
-          ☰
+          {navbarOpen ? "✕" : "☰"}
         </button>
       </div>
       <div

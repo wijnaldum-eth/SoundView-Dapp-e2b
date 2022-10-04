@@ -56,7 +56,7 @@ export const Navigation = () => {
           </button>
         </div>
         <div className="w-[12%]">
-          <button className="mb-5 rounded-lg bg-themeRed p-3 text-white font-semibold hover:scale-110 transition duration-150 ease-in-out">
+          <button className="mb-5 rounded-lg bg-themeRed p-3 text-white font-semibold hover:scale-105 transition duration-150 ease-in-out">
             Connect Wallet
           </button>
         </div>
