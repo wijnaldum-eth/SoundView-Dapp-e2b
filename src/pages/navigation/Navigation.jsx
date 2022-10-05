@@ -104,7 +104,7 @@ export const Navigation = () => {
             </p>
             <h1 className="sm:pt-6 pt-3">Join our various communities</h1>
             <div className="flex flex-row gap-1 mt-1">
-              <a href="https://discord.gg/Zh6QPKv6" target="blank_">
+              <a href="https://discord.gg/ZGHU9An8" target="blank_">
                 <Discord />
               </a>
               <a href="https://t.me/soundview" target="blank_">
