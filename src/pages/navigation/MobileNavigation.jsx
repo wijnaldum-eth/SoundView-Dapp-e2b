@@ -8,6 +8,7 @@ export const MobileNavigation = () => {
 
   const toggleNav = () => {
     setNavbarOpen(!navbarOpen);
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
   return (
@@ -16,7 +17,7 @@ export const MobileNavigation = () => {
         <SoundViewLogoMobile />
         <button
           className="text-bold text-4xl font-black pr-2"
-          onClick={() => toggleNav()}
+          onClick={() => setNavbarOpen(!navbarOpen)}
         >
           {navbarOpen ? "✕" : "☰"}
         </button>
@@ -41,19 +42,34 @@ export const MobileNavigation = () => {
           </button>
         </div>
         <div className="flex flex-col items-start gap-8 w-full text-black text-lg font-semibold mt-4 px-4 mb-7">
-          <button className="hover:text-themeRed active:text-themeRed focus:text-themeRed">
+          <button
+            className="hover:text-themeRed active:text-themeRed focus:text-themeRed"
+            onClick={() => toggleNav()}
+          >
             <Link to="/">Home</Link>
           </button>
-          <button className="hover:text-themeRed focus:text-themeRed active:text-themeRed">
+          <button
+            className="hover:text-themeRed focus:text-themeRed active:text-themeRed"
+            onClick={() => toggleNav()}
+          >
             <Link to="/statistics">Statistics</Link>
           </button>
-          <button className="hover:text-themeRed focus:text-themeRed active:text-themeRed">
+          <button
+            className="hover:text-themeRed focus:text-themeRed active:text-themeRed"
+            onClick={() => toggleNav()}
+          >
             <Link to="/stream">Stream</Link>
           </button>
-          <button className="hover:text-themeRed focus:text-themeRed active:text-themeRed">
+          <button
+            className="hover:text-themeRed focus:text-themeRed active:text-themeRed"
+            onClick={() => toggleNav()}
+          >
             <Link to="/market">Market Place</Link>
           </button>
-          <button className="hover:text-themeRed focus:text-themeRed active:text-themeRed">
+          <button
+            className="hover:text-themeRed focus:text-themeRed active:text-themeRed"
+            onClick={() => toggleNav()}
+          >
             <Link to="/create">Create</Link>
           </button>
         </div>

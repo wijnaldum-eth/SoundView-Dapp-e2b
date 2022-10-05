@@ -3,7 +3,8 @@ import nftbanner from "../../icons/nftbanner.png";
 import { Search } from "../../icons/Search";
 import { Card } from "../home/home-carousel/carousel";
 
-export const Market = () => {
+export const Market = (props) => {
+  const { header } = props;
   return (
     <div className="w-full sm:py-40 py-24 px-4 sm:px-12">
       <div className="w-full flex flex-col items-center gap-8">
@@ -12,9 +13,7 @@ export const Market = () => {
           alt="nft banner"
           className="sm:w-full h-auto rounded-2xl"
         />
-        <h1 className="text-2xl text-black sm:text-4xl">
-          Hip-hop Rap Music NFTs
-        </h1>
+        <h1 className="text-2xl text-black sm:text-4xl">{header}</h1>
         <p className="text-center text-base sm:text-2xl">
           Soundview is the only platform to purchase amazing and exclusive
           musical NFTs.

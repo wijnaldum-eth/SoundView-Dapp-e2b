@@ -4,9 +4,19 @@ import soundviewlogo from "../../icons/soundviewlogo.png";
 import { Search } from "../../icons/Search";
 import { MobileNavigation } from "./MobileNavigation";
 import { Discord } from "../../icons/Discord";
+import { Telegram } from "../../icons/Telegram";
 import soundviewwhite from "../../icons/soundviewwhite.png";
+import { useEffect } from "react";
 
 export const Navigation = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
+  const handleClick = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       <MobileNavigation />
@@ -39,19 +49,34 @@ export const Navigation = () => {
           </div>
         </div>
         <div className="flex flex-row items-center justify-evenly w-[35%] text-black font-semibold mb-7">
-          <button className="hover:text-themeRed active:text-themeRed focus:text-themeRed">
+          <button
+            onClick={() => handleClick()}
+            className="hover:text-themeRed active:text-themeRed focus:text-themeRed"
+          >
             <Link to="/">Home</Link>
           </button>
-          <button className="hover:text-themeRed focus:text-themeRed active:text-themeRed">
+          <button
+            onClick={() => handleClick()}
+            className="hover:text-themeRed focus:text-themeRed active:text-themeRed"
+          >
             <Link to="/statistics">Statistics</Link>
           </button>
-          <button className="hover:text-themeRed focus:text-themeRed active:text-themeRed">
+          <button
+            onClick={() => handleClick()}
+            className="hover:text-themeRed focus:text-themeRed active:text-themeRed"
+          >
             <Link to="/stream">Stream</Link>
           </button>
-          <button className="hover:text-themeRed focus:text-themeRed active:text-themeRed">
+          <button
+            onClick={() => handleClick()}
+            className="hover:text-themeRed focus:text-themeRed active:text-themeRed"
+          >
             <Link to="/market">Market Place</Link>
           </button>
-          <button className="hover:text-themeRed focus:text-themeRed active:text-themeRed">
+          <button
+            onClick={() => handleClick()}
+            className="hover:text-themeRed focus:text-themeRed active:text-themeRed"
+          >
             <Link to="/create">Create</Link>
           </button>
         </div>
@@ -78,24 +103,70 @@ export const Navigation = () => {
               fans can stream to earn along side their favorite artist
             </p>
             <h1 className="sm:pt-6 pt-3">Join our various communities</h1>
-            <div className="flex flex-row gap-3 mt-1">
-              <Discord />
+            <div className="flex flex-row gap-1 mt-1">
+              <a href="https://discord.gg/Zh6QPKv6" target="blank_">
+                <Discord />
+              </a>
+              <a href="https://t.me/soundview" target="blank_">
+                <Telegram />
+              </a>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-14 sm:mt-20 mt-10 text-white">
             <div className="flex flex-row sm:gap-24 w-full justify-between text-white">
               <div className="flex flex-col gap-2">
-                <h1 className="text-bold text-xl">Market Place</h1>
-                <p className="text-xs font-extralight">All NFTs</p>
-                <p className="text-xs font-extralight">Afrobeats</p>
-                <p className="text-xs font-extralight">Afrofusion</p>
-                <p className="text-xs font-extralight">AfroTrap</p>
-                <p className="text-xs font-extralight">Afro pop</p>
-                <p className="text-xs font-extralight">Hip hop</p>
-                <p className="text-xs font-extralight">Gospel</p>
+                <div className="flex flex-row gap-1">
+                  <h1 className="text-bold text-xl">Market</h1>{" "}
+                  <h1 className="text-bold text-xl">Place</h1>
+                </div>
+                <p
+                  onClick={() => handleClick()}
+                  className="text-xs font-extralight"
+                >
+                  <Link to="/market">All NFTs</Link>
+                </p>
+                <p
+                  onClick={() => handleClick()}
+                  className="text-xs font-extralight"
+                >
+                  <Link to="/market/afrobeats-nft">Afrobeats</Link>
+                </p>
+                <p
+                  onClick={() => handleClick()}
+                  className="text-xs font-extralight"
+                >
+                  <Link to="/market/afrofusion-nft">Afrofusion</Link>
+                </p>
+                <p
+                  onClick={() => handleClick()}
+                  className="text-xs font-extralight"
+                >
+                  <Link to="/market/afrotrap-nft">AfroTrap</Link>
+                </p>
+                <p
+                  onClick={() => handleClick()}
+                  className="text-xs font-extralight"
+                >
+                  <Link to="/market/afropop-nft">Afro pop</Link>
+                </p>
+                <p
+                  onClick={() => handleClick()}
+                  className="text-xs font-extralight"
+                >
+                  <Link to="/market/hiphop-nft">Hip hop</Link>
+                </p>
+                <p
+                  onClick={() => handleClick()}
+                  className="text-xs font-extralight"
+                >
+                  <Link to="/market/gospel-nft">Gospel</Link>
+                </p>
               </div>
               <div className="flex flex-col gap-2">
-                <h1 className="text-bold text-xl">My Account</h1>
+                <div className="flex flex-row gap-1">
+                  <h1 className="text-bold text-xl">My</h1>{" "}
+                  <h1 className="text-bold text-xl"> Account</h1>
+                </div>
                 <p className="text-xs font-extralight">Profile</p>
                 <p className="text-xs font-extralight">Favorite</p>
                 <p className="text-xs font-extralight">Watch list</p>
