@@ -2,7 +2,7 @@ import React from "react";
 
 export const RankingsMobile = () => {
   return (
-    <div className="ml-[15px] mb-6 p-4 flex bg-gray-100 flex-col items-center gap-4 sm:hidden w-[calc(100vw-30px)] rounded-lg shadow-sm">
+    <div className="mb-6 p-4 flex bg-gray-100 flex-col justify-center items-center gap-4 sm:hidden w-full rounded-lg shadow-sm">
       <div className="flex flex-row items-center justify-between w-full sm:hidden">
         <div>1</div>
         <div>Soundview</div>

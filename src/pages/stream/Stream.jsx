@@ -1,8 +1,23 @@
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Card } from "../home/home-carousel/carousel";
+import { StreamVideo } from "./StreamVideo";
+import { StreamMusic } from "./StreamMusic";
 
 export const Stream = () => {
+  const [music, setMusic] = useState(false);
+  const [video, setVideo] = useState(true);
+
+  const toggleMusic = () => {
+    setVideo(false);
+    setMusic(true);
+  };
+
+  const toggleVideo = () => {
+    setMusic(false);
+    setVideo(true);
+  };
+
   return (
     <div className="flex flex-col gap-8 w-full py-40 sm:px-12">
       <h1 className="text-left text-black text-2xl px-5 sm:px-0 sm:text-4xl">
@@ -10,11 +25,27 @@ export const Stream = () => {
       </h1>
       <div className="flex flex-col gap-8 sm:gap-0 sm:flex-row px-5 sm:px-0 w-full sm:justify-between">
         <div className="flex flex-row w-full gap-8 text-black">
-          <button className="hover:text-themeRed font-bold text-xl focus:text-themeRed active:text-themeRed">
-            <Link to="/stream">Video</Link>
+          <button
+            onClick={() => toggleVideo()}
+            className="hover:text-themeRed font-bold text-xl focus:text-themeRed active:text-themeRed"
+          >
+            <Link
+              to="/stream"
+              className={`${video ? "text-themeRed" : "text-black"}`}
+            >
+              Video
+            </Link>
           </button>
-          <button className="hover:text-themeRed font-bold text-xl focus:text-themeRed active:text-themeRed">
-            <Link to="/stream">Audio</Link>
+          <button
+            onClick={() => toggleMusic()}
+            className="hover:text-themeRed font-bold text-xl focus:text-themeRed active:text-themeRed"
+          >
+            <Link
+              to="/stream"
+              className={`${music ? "text-themeRed" : "text-black"}`}
+            >
+              Audio
+            </Link>
           </button>
         </div>
         <div className="flex flex-row w-full justify-end gap-8">
@@ -294,23 +325,7 @@ export const Stream = () => {
           </div>
         </div>
       </div>
-      <section className="pt-6 pb-8 w-full">
-        <div className="flex flex-col gap-10 sm:flex-row items-center justify-evenly mb-12 ">
-          {[1, 2, 3].map((i) => {
-            return <Card />;
-          })}
-        </div>
-        <div className="flex flex-col gap-10 sm:flex-row items-center justify-evenly mb-12 ">
-          {[1, 2, 3].map((i) => {
-            return <Card />;
-          })}
-        </div>
-        <div className="flex flex-col gap-10 sm:flex-row items-center justify-evenly mb-12 ">
-          {[1, 2, 3].map((i) => {
-            return <Card />;
-          })}
-        </div>
-      </section>
+      <div>{video ? <StreamVideo /> : <StreamMusic />}</div>
     </div>
   );
 };

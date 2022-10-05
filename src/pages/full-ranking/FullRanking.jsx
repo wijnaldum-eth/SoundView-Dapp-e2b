@@ -294,7 +294,7 @@ export const FullRanking = () => {
           </div>
         </div>
       </div>
-      <section className="pt-6 pb-8 w-full">
+      <section className="pt-6 px-5 pb-8 w-full">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18].map(
           (i) => {
             return <RankingsMobile />;

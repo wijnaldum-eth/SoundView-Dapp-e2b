@@ -11,10 +11,7 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<Navigation />}>
         <Route index element={<HomePage />} />
-        <Route
-          path="market"
-          element={<Market header="Hip-hop Rap Music NFTs" />}
-        />
+        <Route path="market" element={<Market header="Explore Music NFTs" />} />
         <Route
           path="market/afrobeats-nft"
           element={<Market header="Afrobeats Music NFTs" />}

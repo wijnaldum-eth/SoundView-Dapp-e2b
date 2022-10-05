@@ -1,8 +1,9 @@
 import React from "react";
 
-export const Card = () => {
+export const Card = (props) => {
+  const { price, title, sale } = props;
   return (
-    <div className="rounded-2xl shadow-lg bg-white max-w-sm">
+    <div className="rounded-2xl shadow-lg bg-red-50 max-w-sm">
       <img
         className="rounded-t-2xl"
         src="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
@@ -11,10 +12,10 @@ export const Card = () => {
       <div className="p-6 bg-transparent flex flex-row justify-between">
         <div>
           <h5 className="text-gray-900 text-2xl font-bold font-Manrope mb-2">
-            Will Smith
+            {title}
           </h5>
           <p className="text-transparent hover:text-gray-700 text-sm mb-2">
-            Sales in 3 hours
+            {sale}
           </p>
           <button
             type="button"
@@ -28,7 +29,7 @@ export const Card = () => {
             RECORD LABEL
           </div>
           <div className="text-black bg-gray-200 text-sm w-full pl-1">
-            Price: $1000
+            {`Price: $${price}`}
           </div>
         </div>
       </div>

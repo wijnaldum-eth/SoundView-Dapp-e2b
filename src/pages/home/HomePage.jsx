@@ -73,7 +73,9 @@ export const HomePage = () => {
         </div>
         <div className="flex flex-col sm:flex-row items-center gap-6 sm:justify-evenly ">
           {[1, 2, 3].map((i) => {
-            return <Card />;
+            return (
+              <Card title="Will Smith" price="999" sale="sales in 3 hour(s)" />
+            );
           })}
         </div>
       </section>
@@ -144,7 +146,9 @@ export const HomePage = () => {
         </div>
         <div className="flex flex-col sm:flex-row items-center gap-3 sm:justify-evenly ">
           {[1, 2, 3].map((i) => {
-            return <Card />;
+            return (
+              <Card title="Will Smith" price="999" sale="sales in 3 hour(s)" />
+            );
           })}
         </div>
       </section>
@@ -157,12 +161,16 @@ export const HomePage = () => {
         </div>
         <div className="flex flex-col gap-10 sm:flex-row items-center justify-evenly mb-14 ">
           {[1, 2, 3].map((i) => {
-            return <Card />;
+            return (
+              <Card title="Will Smith" price="999" sale="sales in 3 hour(s)" />
+            );
           })}
         </div>
         <div className="flex flex-col gap-10 sm:flex-row items-center justify-evenly mb-14 ">
           {[1, 2, 3].map((i) => {
-            return <Card />;
+            return (
+              <Card title="Will Smith" price="999" sale="sales in 3 hour(s)" />
+            );
           })}
         </div>
       </section>
