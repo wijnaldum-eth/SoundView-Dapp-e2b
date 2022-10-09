@@ -6,6 +6,7 @@ import { Clipboard } from "../../icons/Clipboard";
 import { Card } from "./home-carousel/carousel";
 import { Newsletter } from "../../icons/Newsletter";
 import { RankingsMobile } from "./rankings-mobile/RankingsMobile";
+import { Link } from "react-router-dom";
 
 export const HomePage = () => {
   return (
@@ -20,7 +21,7 @@ export const HomePage = () => {
           where fans can stream to earn along side their favorite artist.
         </p>
         <button className="border-2 rounded-lg border-themeRed p-3 text-themeRed font-semibold hover:scale-110 transition duration-150 ease-in-out">
-          Stream Contents
+          <Link to="/stream">Stream Contents</Link>
         </button>
       </section>
       {/* THE BLIND SECTION */}
@@ -212,7 +213,7 @@ export const HomePage = () => {
         })}
         <div className="flex flex-row items-center justify-center pt-12">
           <button className="mb-5 rounded-lg bg-themeRed p-3 text-white font-semibold hover:scale-110 transition duration-150 ease-in-out">
-            View all rankings
+            <Link to="/statistics">View all rankings</Link>
           </button>
         </div>
       </section>

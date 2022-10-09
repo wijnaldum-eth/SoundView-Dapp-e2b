@@ -3,7 +3,7 @@ import React from "react";
 export const Card = (props) => {
   const { price, title, sale } = props;
   return (
-    <div className="rounded-2xl shadow-lg bg-red-50 max-w-sm">
+    <div className="rounded-2xl shadow-lg hover:ease-in-out duration-500 hover:scale-[1.05] bg-red-50 max-w-sm">
       <img
         className="rounded-t-2xl"
         src="https://mdbootstrap.com/img/new/standard/nature/184.jpg"

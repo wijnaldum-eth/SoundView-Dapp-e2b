@@ -5,7 +5,7 @@ import { AntDClock } from "../../icons/AntDClock";
 export const DesktopMusicCard = (props) => {
   const { ranking, image, title, artist, genre, release_date, length } = props;
   return (
-    <div className="hidden sm:flex sm:flex-row sm:gap-28 sm:w-full sm:bg-gray-100 sm:rounded-lg sm:h-16 sm:py-2 sm:px-6">
+    <div className="hidden sm:flex sm:flex-row sm:gap-28 sm:w-full hover:ease-in-out duration-500 hover:scale-[1.05] sm:bg-gray-100 sm:rounded-lg sm:h-16 sm:py-2 sm:px-6">
       <div className="flex flex-row w-2/5 items-center gap-10">
         <div>{ranking}</div>
         <div className="w-12 h-full rounded-[200px] object-cover bg-gray-300">
@@ -30,7 +30,7 @@ export const DesktopMusicCard = (props) => {
 export const MobileMusicCard = (props) => {
   const { title, artist, length } = props;
   return (
-    <div className="mb-4 p-4 flex bg-gray-100 flex-row justify-between items-center gap-4 sm:hidden w-full rounded-lg shadow-sm">
+    <div className="mb-4 p-4 flex bg-gray-100 flex-row justify-between items-center hover:ease-in-out duration-500 hover:scale-[1.05] gap-4 sm:hidden w-full rounded-lg shadow-sm">
       <div className="flex flex-col gap-1 items-start justify-center">
         <div>
           <MobilePlayButton />

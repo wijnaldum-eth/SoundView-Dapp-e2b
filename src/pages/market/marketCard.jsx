@@ -1,8 +1,7 @@
 import React from "react";
-import { PlayButton } from "../../icons/PlayButton";
 
-export const VideoCard = (props) => {
-  const { image, views, title, timestamp } = props;
+export const MarketCard = (props) => {
+  const { image, title, album } = props;
   return (
     <div className="rounded-2xl shadow-lg bg-red-50 max-w-sm hover:ease-in-out duration-500 hover:scale-[1.05]">
       <img
@@ -20,10 +19,7 @@ export const VideoCard = (props) => {
         </div>
         <div className="flex flex-col items-start justify-center">
           <h1 className="font-bold text-black">{title}</h1>
-          <p className="font-light">{`${views}K views, ${timestamp}`}</p>
-        </div>
-        <div className="absolute right-10 bottom-14 hover:ease-in-out duration-500 hover:scale-[1.05] cursor-pointer">
-          {<PlayButton />}
+          <p className="font-light">{`Album: ${album}`}</p>
         </div>
       </div>
     </div>

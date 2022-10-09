@@ -1,7 +1,7 @@
 import React from "react";
 import nftbanner from "../../icons/nftbanner.png";
 import { Search } from "../../icons/Search";
-import { Card } from "../home/home-carousel/carousel";
+import { MarketCard } from "./marketCard";
 
 export const Market = (props) => {
   const { header } = props;
@@ -45,17 +45,35 @@ export const Market = (props) => {
           </div>
           <div className="flex flex-col gap-10 sm:flex-row items-center justify-evenly mb-12 ">
             {[1, 2, 3].map((i) => {
-              return <Card />;
+              return (
+                <MarketCard
+                  title="The Debut"
+                  album="Mr. SoundView"
+                  image="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
+                />
+              );
             })}
           </div>
           <div className="flex flex-col gap-10 sm:flex-row items-center justify-evenly mb-12 ">
             {[1, 2, 3].map((i) => {
-              return <Card />;
+              return (
+                <MarketCard
+                  title="The Debut"
+                  album="Mr. SoundView"
+                  image="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
+                />
+              );
             })}
           </div>
           <div className="flex flex-col gap-10 sm:flex-row items-center justify-evenly mb-12 ">
             {[1, 2, 3].map((i) => {
-              return <Card />;
+              return (
+                <MarketCard
+                  title="The Debut"
+                  album="Mr. SoundView"
+                  image="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
+                />
+              );
             })}
           </div>
         </section>

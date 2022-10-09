@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment, useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import soundviewlogo from "../../icons/soundviewlogo.png";
 import { Search } from "../../icons/Search";
@@ -7,8 +7,20 @@ import { Discord } from "../../icons/Discord";
 import { Telegram } from "../../icons/Telegram";
 import soundviewwhite from "../../icons/soundviewwhite.png";
 import { useEffect } from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import { MetaMask } from "../../icons/Coins";
 
 export const Navigation = () => {
+  let [isOpen, setIsOpen] = useState(false);
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
@@ -19,6 +31,88 @@ export const Navigation = () => {
 
   return (
     <>
+      <>
+        <Transition appear show={isOpen} as={Fragment}>
+          <Dialog as="div" className="relative z-10" onClose={closeModal}>
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <div className="fixed inset-0 bg-black bg-opacity-25" />
+            </Transition.Child>
+
+            <div className="fixed inset-0 overflow-y-auto">
+              <div className="flex min-h-full items-center justify-center p-4 text-center">
+                <Transition.Child
+                  as={Fragment}
+                  enter="ease-out duration-300"
+                  enterFrom="opacity-0 scale-95"
+                  enterTo="opacity-100 scale-100"
+                  leave="ease-in duration-200"
+                  leaveFrom="opacity-100 scale-100"
+                  leaveTo="opacity-0 scale-95"
+                >
+                  <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                    <Dialog.Title
+                      as="h3"
+                      className="text-lg font-medium leading-6 text-gray-900"
+                    >
+                      Connect your Wallet
+                    </Dialog.Title>
+                    <div className="mt-2">
+                      <p className="text-sm text-gray-500">
+                        If you don’t have a wallet connected, you can select one
+                        of the options and create one.
+                      </p>
+                    </div>
+                    <div>
+                      <div className="flex flex-row gap-10">
+                        <div className="flex flex-col gap-2 items-center justify-center">
+                          <MetaMask />
+                          <p className="font-bold text-black">MetaMask</p>
+                        </div>
+                        <div className="flex flex-col gap-2 items-center justify-center">
+                          <MetaMask />
+                          <p className="font-bold text-black">MetaMask</p>
+                        </div>
+                        <div className="flex flex-col gap-2 items-center justify-center">
+                          <MetaMask />
+                          <p className="font-bold text-black">MetaMask</p>
+                        </div>
+                        <div className="flex flex-col gap-2 items-center justify-center">
+                          <MetaMask />
+                          <p className="font-bold text-black">MetaMask</p>
+                        </div>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div className="mt-2">
+                      <p className="text-sm text-gray-500">
+                        By connecting your wallet, you agree to Soundview’s
+                        Term’s & Conditions and Privacy Policy
+                      </p>
+                    </div>
+                    <div className=" absolute mt-4 top-1 right-5">
+                      <button
+                        type="button"
+                        className="inline-flex justify-center rounded-md border border-transparent px-4 py-2 text-sm font-bold hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
+                        onClick={closeModal}
+                      >
+                        ✕
+                      </button>
+                    </div>
+                  </Dialog.Panel>
+                </Transition.Child>
+              </div>
+            </div>
+          </Dialog>
+        </Transition>
+      </>
       <MobileNavigation />
       <div className="sm:h-32 hidden sm:w-full sm:flex flex-row items-end shadow-sm justify-between sm:p-[45px] pt-28 sm:fixed z-50 bg-white">
         <div className="w-[15%]">
@@ -51,37 +145,40 @@ export const Navigation = () => {
         <div className="flex flex-row items-center justify-evenly w-[35%] text-black font-semibold mb-7">
           <button
             onClick={() => handleClick()}
-            className="hover:text-themeRed active:text-themeRed focus:text-themeRed"
+            className="hover:text-themeRed hover:ease-in-out duration-300 hover:scale-[1.1] active:text-themeRed focus:text-themeRed"
           >
             <Link to="/">Home</Link>
           </button>
           <button
             onClick={() => handleClick()}
-            className="hover:text-themeRed focus:text-themeRed active:text-themeRed"
+            className="hover:text-themeRed hover:ease-in-out duration-300 hover:scale-[1.1] focus:text-themeRed active:text-themeRed"
           >
             <Link to="/statistics">Statistics</Link>
           </button>
           <button
             onClick={() => handleClick()}
-            className="hover:text-themeRed focus:text-themeRed active:text-themeRed"
+            className="hover:text-themeRed hover:ease-in-out duration-300 hover:scale-[1.1] focus:text-themeRed active:text-themeRed"
           >
             <Link to="/stream">Stream</Link>
           </button>
           <button
             onClick={() => handleClick()}
-            className="hover:text-themeRed focus:text-themeRed active:text-themeRed"
+            className="hover:text-themeRed hover:ease-in-out duration-300 hover:scale-[1.1] focus:text-themeRed active:text-themeRed"
           >
             <Link to="/market">Market Place</Link>
           </button>
           <button
             onClick={() => handleClick()}
-            className="hover:text-themeRed focus:text-themeRed active:text-themeRed"
+            className="hover:text-themeRed hover:ease-in-out duration-300 hover:scale-[1.1] focus:text-themeRed active:text-themeRed"
           >
             <Link to="/create">Create</Link>
           </button>
         </div>
         <div className="w-[12%]">
-          <button className="mb-5 rounded-lg bg-themeRed p-3 text-white font-semibold hover:scale-105 transition duration-150 ease-in-out">
+          <button
+            onClick={() => openModal()}
+            className="mb-5 rounded-lg bg-themeRed p-3 text-white font-semibold hover:scale-105 transition duration-150 ease-in-out"
+          >
             Connect Wallet
           </button>
         </div>

@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: "jit",
-  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
+  content: [
+    "./src/**/*.{html,js,jsx,ts,tsx}",
+    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     extend: {
       animation: {
@@ -21,5 +24,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animation-delay")],
+  plugins: [require("tailwindcss-animation-delay"), require("flowbite/plugin")],
 };
