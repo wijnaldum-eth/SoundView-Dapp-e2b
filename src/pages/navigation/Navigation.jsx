@@ -8,7 +8,13 @@ import { Telegram } from "../../icons/Telegram";
 import soundviewwhite from "../../icons/soundviewwhite.png";
 import { useEffect } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { MetaMask } from "../../icons/Coins";
+import metamask from "../../icons/metamask.png";
+import oasis from "../../icons/oasis.png";
+import coinbase from "../../icons/coinbase.png";
+import binance from "../../icons/binance.png";
+import solana from "../../icons/solana.png";
+import walletconnect from "../../icons/walletconnect.png";
+import brave from "../../icons/brave.png";
 
 export const Navigation = () => {
   let [isOpen, setIsOpen] = useState(false);
@@ -57,10 +63,10 @@ export const Navigation = () => {
                   leaveFrom="opacity-100 scale-100"
                   leaveTo="opacity-0 scale-95"
                 >
-                  <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  <Dialog.Panel className="w-full max-w-xl transform overflow-hidden rounded-2xl bg-white sm:p-12 text-left align-middle shadow-xl transition-all">
                     <Dialog.Title
                       as="h3"
-                      className="text-lg font-medium leading-6 text-gray-900"
+                      className="text-lg font-bold leading-6 text-gray-900"
                     >
                       Connect your Wallet
                     </Dialog.Title>
@@ -70,26 +76,67 @@ export const Navigation = () => {
                         of the options and create one.
                       </p>
                     </div>
-                    <div>
-                      <div className="flex flex-row gap-10">
-                        <div className="flex flex-col gap-2 items-center justify-center">
-                          <MetaMask />
+                    <div className="sm:p-6 flex flex-col gap-5">
+                      <div className="flex flex-row gap-10 items-center justify-evenly">
+                        <div className="flex flex-col gap-2 items-center justify-center hover:ease-in-out duration-300 hover:scale-[1.1]">
+                          <img
+                            src={metamask}
+                            alt="soundview-metamask"
+                            className="sm:w-[50px] w-[35px] h-auto"
+                          />
                           <p className="font-bold text-black">MetaMask</p>
                         </div>
-                        <div className="flex flex-col gap-2 items-center justify-center">
-                          <MetaMask />
-                          <p className="font-bold text-black">MetaMask</p>
+                        <div className="flex flex-col gap-2 items-center justify-center hover:ease-in-out duration-300 hover:scale-[1.1]">
+                          <img
+                            src={coinbase}
+                            alt="soundview coinbase"
+                            className="sm:w-[50px] w-[35px] h-auto"
+                          />
+                          <p className="font-bold text-black">Coinbase</p>
                         </div>
-                        <div className="flex flex-col gap-2 items-center justify-center">
-                          <MetaMask />
-                          <p className="font-bold text-black">MetaMask</p>
+                        <div className="flex flex-col gap-2 items-center justify-center hover:ease-in-out duration-300 hover:scale-[1.1]">
+                          <img
+                            src={binance}
+                            alt="soundview binance"
+                            className="sm:w-[50px] w-[35px] h-auto"
+                          />
+                          <p className="font-bold text-black">Binance</p>
                         </div>
-                        <div className="flex flex-col gap-2 items-center justify-center">
-                          <MetaMask />
-                          <p className="font-bold text-black">MetaMask</p>
+                        <div className="flex flex-col gap-2 items-center justify-center hover:ease-in-out duration-300 hover:scale-[1.1]">
+                          <img
+                            src={oasis}
+                            alt="soundview oasis"
+                            className="sm:w-[50px] w-[35px] h-auto"
+                          />
+                          <p className="font-bold text-black">Oasis</p>
                         </div>
                       </div>
-                      <div></div>
+                      <div className="flex flex-row gap-10 items-center justify-evenly">
+                        <div className="flex flex-col gap-2 items-center justify-center hover:ease-in-out duration-300 hover:scale-[1.1]">
+                          <img
+                            src={brave}
+                            alt="soundview brave"
+                            className="sm:w-[50px] w-[35px] h-auto"
+                          />
+                          <p className="font-bold text-black">Brave</p>
+                        </div>
+                        <div className="flex flex-col gap-2 items-center justify-center hover:ease-in-out duration-300 hover:scale-[1.1]">
+                          <img
+                            src={solana}
+                            alt="soundview solana"
+                            className="sm:w-[50px] w-[35px] h-auto"
+                          />
+                          <p className="font-bold text-black">Solana</p>
+                        </div>
+                        <div className="flex flex-col gap-2 items-center justify-center hover:ease-in-out duration-300 hover:scale-[1.1]">
+                          <img
+                            src={walletconnect}
+                            alt="soundview wallet connect"
+                            className="sm:w-[50px] w-[35px] h-auto"
+                          />
+                          <p className="font-bold text-black">Wallet Connect</p>
+                        </div>
+                      </div>
                     </div>
                     <div className="mt-2">
                       <p className="text-sm text-gray-500">

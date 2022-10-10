@@ -1,10 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import { Link } from "react-router-dom";
 import { SoundViewLogoMobile } from "../../icons/Logo";
 import { Search } from "../../icons/Search";
+import { Dialog, Transition } from "@headlessui/react";
+import metamask from "../../icons/metamask.png";
+import oasis from "../../icons/oasis.png";
+import coinbase from "../../icons/coinbase.png";
+import binance from "../../icons/binance.png";
+import solana from "../../icons/solana.png";
+import walletconnect from "../../icons/walletconnect.png";
+import brave from "../../icons/brave.png";
 
 export const MobileNavigation = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  let [isOpen, setIsOpen] = useState(false);
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal() {
+    setNavbarOpen(false);
+    setIsOpen(true);
+  }
 
   const toggleNav = () => {
     setNavbarOpen(!navbarOpen);
@@ -13,6 +31,137 @@ export const MobileNavigation = () => {
 
   return (
     <div className="flex flex-col sm:hidden w-full bg-white shadow-md fixed z-50">
+      <>
+        <Transition appear show={isOpen} as={Fragment}>
+          <Dialog as="div" className="relative z-10" onClose={closeModal}>
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <div className="fixed inset-0 bg-black bg-opacity-25" />
+            </Transition.Child>
+
+            <div className="fixed inset-0 overflow-y-auto">
+              <div className="flex min-h-full items-center justify-center p-4 text-center">
+                <Transition.Child
+                  as={Fragment}
+                  enter="ease-out duration-300"
+                  enterFrom="opacity-0 scale-95"
+                  enterTo="opacity-100 scale-100"
+                  leave="ease-in duration-200"
+                  leaveFrom="opacity-100 scale-100"
+                  leaveTo="opacity-0 scale-95"
+                >
+                  <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white sm:p-12 p-5 text-left align-middle shadow-xl transition-all">
+                    <Dialog.Title
+                      as="h3"
+                      className="text-lg font-bold leading-6 text-gray-900"
+                    >
+                      Connect your Wallet
+                    </Dialog.Title>
+                    <div className="mt-2">
+                      <p className="text-sm font-light text-gray-800">
+                        If you don’t have a wallet connected, you can select one
+                        of the options and create one.
+                      </p>
+                    </div>
+                    <div className="sm:p-6 p-4 py-8 flex flex-col gap-5">
+                      <div className="flex flex-row gap-5 items-center justify-evenly">
+                        <div className="flex flex-col gap-2 items-center justify-center">
+                          <img
+                            src={metamask}
+                            alt="soundview-metamask"
+                            className="sm:w-[50px] w-[35px] h-auto"
+                          />
+                          <p className="font-bold text-xs text-black">
+                            MetaMask
+                          </p>
+                        </div>
+                        <div className="flex flex-col gap-2 items-center justify-center">
+                          <img
+                            src={coinbase}
+                            alt="soundview coinbase"
+                            className="sm:w-[50px] w-[35px] h-auto"
+                          />
+                          <p className="font-bold text-xs text-black">
+                            Coinbase
+                          </p>
+                        </div>
+                        <div className="flex flex-col gap-2 items-center justify-center">
+                          <img
+                            src={binance}
+                            alt="soundview binance"
+                            className="sm:w-[50px] w-[35px] h-auto"
+                          />
+                          <p className="font-bold text-xs text-black">
+                            Binance
+                          </p>
+                        </div>
+                        <div className="flex flex-col gap-2 items-center justify-center">
+                          <img
+                            src={oasis}
+                            alt="soundview oasis"
+                            className="sm:w-[50px] w-[35px] h-auto"
+                          />
+                          <p className="font-bold text-xs text-black">Oasis</p>
+                        </div>
+                      </div>
+                      <div className="flex flex-row gap-5 items-center justify-evenly">
+                        <div className="flex flex-col gap-2 items-center justify-center">
+                          <img
+                            src={brave}
+                            alt="soundview brave"
+                            className="sm:w-[50px] w-[35px] h-auto"
+                          />
+                          <p className="font-bold text-xs text-black">Brave</p>
+                        </div>
+                        <div className="flex flex-col gap-2 items-center justify-center">
+                          <img
+                            src={solana}
+                            alt="soundview solana"
+                            className="sm:w-[50px] w-[35px] h-auto"
+                          />
+                          <p className="font-bold text-xs text-black">Solana</p>
+                        </div>
+                        <div className="flex flex-col gap-2 items-center justify-center">
+                          <img
+                            src={walletconnect}
+                            alt="soundview wallet connect"
+                            className="sm:w-[50px] w-[35px] h-auto"
+                          />
+                          <p className="font-bold text-xs text-black">
+                            Wallet Connect
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-2">
+                      <p className="text-sm font-light text-gray-800">
+                        By connecting your wallet, you agree to Soundview’s
+                        Term’s & Conditions and Privacy Policy
+                      </p>
+                    </div>
+                    <div className=" absolute mt-4 top-1 right-5">
+                      <button
+                        type="button"
+                        className="inline-flex justify-center rounded-md border border-transparent px-4 py-2 text-sm font-bold hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
+                        onClick={closeModal}
+                      >
+                        ✕
+                      </button>
+                    </div>
+                  </Dialog.Panel>
+                </Transition.Child>
+              </div>
+            </div>
+          </Dialog>
+        </Transition>
+      </>
       <div className="flex flex-row items-center justify-between px-4 py-2 w-full">
         <SoundViewLogoMobile />
         <button
@@ -74,7 +223,10 @@ export const MobileNavigation = () => {
           </button>
         </div>
         <div className="w-full flex flex-row items-center justify-center pb-8">
-          <button className="mb-5 rounded-lg bg-themeRed p-3 text-white font-semibold hover:scale-110 transition duration-150 ease-in-out">
+          <button
+            onClick={() => openModal()}
+            className="mb-5 rounded-lg bg-themeRed p-3 text-white font-semibold hover:scale-110 transition duration-150 ease-in-out"
+          >
             Connect Wallet
           </button>
         </div>
