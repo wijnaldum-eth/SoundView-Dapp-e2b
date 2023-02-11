@@ -5,10 +5,13 @@ import { Market } from "./pages/market/Market.jsx";
 import { Navigation } from "./pages/navigation/Navigation.jsx";
 import { Stream } from "./pages/stream/Stream.jsx";
 import { CreateAccount } from "./pages/create/CreateAccount.jsx";
+import { PurchasePage } from "./pages/purchase/PurchasePage";
+import { Login } from "./pages/login/Login.jsx";
 
 export const App = () => {
   return (
     <Routes>
+      <Route path="login" element={<Login />} />
       <Route path="/" element={<Navigation />}>
         <Route index element={<HomePage />} />
         <Route path="market" element={<Market header="Explore Music NFTs" />} />
@@ -39,6 +42,7 @@ export const App = () => {
         <Route path="statistics" element={<FullRanking />} />
         <Route path="stream" element={<Stream />} />
         <Route path="create" element={<CreateAccount />} />
+        <Route path="buy" element={<PurchasePage />} />
       </Route>
     </Routes>
   );

@@ -69,7 +69,7 @@ export const FullRanking = () => {
                         className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-red-100 "
                         href="/statistics"
                       >
-                        Latin
+                        Afrobeats
                       </a>
                     </li>
                     <li>
@@ -77,7 +77,7 @@ export const FullRanking = () => {
                         className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-red-100"
                         href="/statistics"
                       >
-                        Techno
+                        Afrofusion
                       </a>
                     </li>
                     <li>
@@ -85,7 +85,7 @@ export const FullRanking = () => {
                         className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-red-100"
                         href="/statistics"
                       >
-                        Double Step
+                        Afro trap
                       </a>
                     </li>
                     <li>
@@ -93,7 +93,7 @@ export const FullRanking = () => {
                         className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-red-100"
                         href="/statistics"
                       >
-                        R&B & Soul
+                        Afro pop
                       </a>
                     </li>
                     <li>
@@ -101,15 +101,7 @@ export const FullRanking = () => {
                         className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-red-100"
                         href="/statistics"
                       >
-                        Hip Pop Rap
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-red-100"
-                        href="/statistics"
-                      >
-                        Dance & Edm
+                        Hip Pop
                       </a>
                     </li>
                     <li>

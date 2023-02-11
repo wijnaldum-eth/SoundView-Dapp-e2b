@@ -114,6 +114,20 @@ export const CreateAccount = () => {
               </div>
             </div>
           </div>
+          <div>
+            <h1 className="text-black font-semibold">
+              Add NFT <span className="text-red-600 text-xl">*</span>
+            </h1>
+            <p className="text-sm font-light">Upload your NFT file.</p>
+            <label htmlFor="nft_file" className="nft-file">
+              <div className="bg-neutral-300 w-[50px] h-[50px] rounded-md flex items-center justify-center text-white text-4xl">
+                <span className="flex flex-col items-center justify-center">
+                  <b>⇧</b>
+                </span>
+              </div>
+              <input type="file" id="nft_file" name="nft_file" required />
+            </label>
+          </div>
         </div>
         <div className="flex flex-col sm:w-[50%] gap-10">
           <div>

@@ -38,7 +38,8 @@ input[type="file"] {
 
 .featured-image,
 .profile-image,
-.banner-image {
+.banner-image,
+.nft-file {
   display: inline-block;
   cursor: pointer;
   border: 2px solid rgb(175, 175, 175);
@@ -52,15 +53,25 @@ input[type="file"] {
   border-radius: 200px;
 }
 
+.nft-file {
+  width: 40%;
+  height: 100px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .featured-image {
-  padding: 60px;
+  padding: 50px;
   object-fit: cover;
   border-radius: 5px;
 }
 
 .banner-image {
   width: 70%;
-  padding: 60px;
+  padding: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
