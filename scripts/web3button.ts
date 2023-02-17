@@ -1,3 +1,5 @@
+npm install @thirdweb-dev/react @thirdweb-dev/sdk ethers@5
+
 import { Web3Button } from "@thirdweb-dev/react";
 
 export default function Component() {
