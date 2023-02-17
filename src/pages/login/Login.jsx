@@ -1,8 +1,8 @@
 import React, {} from "react";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   return (
     <div className="w-full h-screen bg-[#f5f5f5] flex flex-col items-center justify-center p-4 sm:p-20">
