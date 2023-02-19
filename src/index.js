@@ -4,8 +4,12 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 import { App } from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { useAddress, useMetamask } from '@thirdweb-dev/react'
 // import { AuthContextProvider } from "./state/context/AuthContext";
-
+async function handleConnectWallet() {
+  const web3 = await connectWallet();
+  console.log)'Connected to wallet:', web3.currentProvider);
+}
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
