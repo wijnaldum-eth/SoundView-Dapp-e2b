@@ -20,6 +20,7 @@ export const PurchaseCard = (props) => {
     <div className="w-full flex flex-col gap-10 px-5 font-Recoleta">
       <div className="w-full h-[300px] object-cover flex items-center justify-center overflow-hidden rounded-2xl">
         <img
+          className="rounded-2xl object-cover overflow-hidden"
           src="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
           alt="soundview buy nft"
         />

@@ -1,14 +1,31 @@
 import React from "react";
+import { useState } from "react";
 import { PurchaseCard } from "./PurchaseCard";
 import { PurchasePageAcordion } from "./PurchasePageAcordion";
+import { Cart } from "./Cart";
 
 export const PurchasePage = () => {
-  const text =
-    "Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro.";
+  const [cart, setCart] = useState(false);
+
+  const handleCartState = () => {
+    setCart(true);
+  };
+
+  const text = (
+    <div className="flex flex-col items-start justify-center gap-2">
+      Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O
+      Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias
+      desde o ano de 1500, quando uma misturou os caracteres de um texto para
+      criar um espécime de livro.
+      <button className="py-3 w-1/3 rounded-lg bg-[#FFD7D9] text-[#CD313C] hover:bg-[#CD313C] hover:text-red-100 font-Recoleta">
+        Go here for minting
+      </button>
+    </div>
+  );
 
   const offers = (
     <div className="flex flex-row items-center justify-center">
-      No offers yet
+      No offers made yet
     </div>
   );
 
@@ -53,11 +70,27 @@ export const PurchasePage = () => {
   const listings = (
     <div className="flex flex-col items-center justify-center">
       <p>4 pieces of rush #3829 have been listed</p>
+      <br />
+      <div className="flex flex-col items-center justify-center rounded-lg object-cover">
+        <img
+          className="w-[200px] h-[200px] bg-slate-200 rounded-lg object-cover"
+          src="#"
+          alt="cart item"
+        />
+        <br />
+        <button
+          className="py-3 w-full rounded-lg bg-[#FFD7D9] text-[#CD313C] hover:bg-[#CD313C] hover:text-red-100 font-Recoleta"
+          onClick={() => handleCartState()}
+        >
+          Purchase
+        </button>
+      </div>
     </div>
   );
 
   return (
-    <div className="flex sm:flex-row flex-col text-sm sm:text-base gap-10 w-full py-40 px-4 sm:px-12">
+    <div className="flex sm:flex-row flex-col text-sm sm:text-base gap-10 w-full py-20 sm:py-40 px-4 sm:px-12 relative">
+      {cart && <Cart />}
       <div className="flex flex-col w-full gap-5">
         <PurchaseCard
           genre="Afropop"
@@ -78,7 +111,10 @@ export const PurchasePage = () => {
           <button className="py-3 w-full rounded-lg bg-[#FFD7D9] text-[#CD313C] hover:bg-[#CD313C] hover:text-red-100 font-Recoleta">
             Add to cart
           </button>
-          <button className="py-3 w-full rounded-lg bg-[#FFD7D9] text-[#CD313C] hover:bg-[#CD313C] hover:text-red-100 font-Recoleta">
+          <button
+            className="py-3 w-full rounded-lg bg-[#FFD7D9] text-[#CD313C] hover:bg-[#CD313C] hover:text-red-100 font-Recoleta"
+            onClick={() => handleCartState()}
+          >
             Purchase
           </button>
         </div>
