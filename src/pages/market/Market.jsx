@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import nftbanner from "../../icons/nftbanner.png";
 import { Search } from "../../icons/Search";
 import { MarketCard } from "./marketCard";
 
 export const Market = (props) => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
   const { header } = props;
   return (
     <div className="w-full sm:py-40 py-24 px-4 sm:px-12">

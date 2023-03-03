@@ -1,11 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { MobilePlayButton } from "../../icons/PlayButton";
 import { AntDClock } from "../../icons/AntDClock";
 
 export const DesktopMusicCard = (props) => {
+  const navigate = useNavigate();
   const { ranking, image, title, artist, genre, release_date, length } = props;
   return (
-    <div className="hidden sm:flex sm:flex-row sm:gap-28 sm:w-full hover:ease-in-out duration-500 hover:scale-[1.05] sm:bg-gray-100 sm:rounded-lg sm:h-16 sm:py-2 sm:px-6">
+    <div
+      className="hidden sm:flex sm:flex-row sm:gap-28 sm:w-full hover:ease-in-out duration-500 hover:scale-[1.05] sm:bg-gray-100 sm:rounded-lg sm:h-16 sm:py-2 sm:px-6"
+      onClick={() => navigate("/buy")}
+    >
       <div className="flex flex-row w-2/5 items-center gap-10">
         <div>{ranking}</div>
         <div className="w-12 h-full rounded-[200px] object-cover bg-gray-300">

@@ -1,15 +1,17 @@
-import React from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { PurchaseCard } from "./PurchaseCard";
 import { PurchasePageAcordion } from "./PurchasePageAcordion";
-import { Cart } from "./Cart";
 
 export const PurchasePage = () => {
-  const [cart, setCart] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
 
-  const handleCartState = () => {
-    setCart(true);
-  };
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
+  function handleCart() {
+    setCartOpen(!cartOpen);
+  }
 
   const text = (
     <div className="flex flex-col items-start justify-center gap-2">
@@ -73,14 +75,14 @@ export const PurchasePage = () => {
       <br />
       <div className="flex flex-col items-center justify-center rounded-lg object-cover">
         <img
-          className="w-[200px] h-[200px] bg-slate-200 rounded-lg object-cover"
-          src="#"
-          alt="cart item"
+          className="w-[200px] h-[200px] bg-slate-200 rounded-lg object-cover overflow-hidden"
+          src="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
+          alt="soundview buy nft"
         />
         <br />
         <button
           className="py-3 w-full rounded-lg bg-[#FFD7D9] text-[#CD313C] hover:bg-[#CD313C] hover:text-red-100 font-Recoleta"
-          onClick={() => handleCartState()}
+          onClick={() => handleCart()}
         >
           Purchase
         </button>
@@ -88,9 +90,86 @@ export const PurchasePage = () => {
     </div>
   );
 
+  const cartItem = (
+    <div className="flex flex-row items-center justify-center gap-4 p-2 sm:p-4">
+      <img
+        className="rounded-lg w-[70px] h-[70px] object-cover"
+        src="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
+        alt="soundview buy nft"
+      />
+      <div className="flex flex-col items-start text-xs justify-center gap-1 mr-4">
+        <h1 className="text-lg">
+          <b>Rush #3456</b>
+        </h1>
+        <p>
+          <b>By Aryar Star | Mavins</b>
+        </p>
+        <p>Creator royalties: 10%</p>
+      </div>
+      <h1 className="text-lg">23.05 ETH</h1>
+    </div>
+  );
+
   return (
-    <div className="flex sm:flex-row flex-col text-sm sm:text-base gap-10 w-full py-20 sm:py-40 px-4 sm:px-12 relative">
-      {cart && <Cart />}
+    <div
+      className={`flex sm:flex-row flex-col text-sm sm:text-base gap-10 w-full items-center justify-center py-20 sm:py-40 px-4 sm:px-12 relative`}
+    >
+      {cartOpen && (
+        <div className="z-50 w-full font-Manrope h-full flex flex-col items-center justify-center absolute">
+          <div className="bg-white p-3 sm:p-8 rounded-xl">
+            <div className="w-full flex flex-row items-center justify-between">
+              <div>
+                <h1>
+                  <b>Your Cart</b>
+                </h1>
+                <p className="text-sm">
+                  Items in your cart not yet purchased until you have certified
+                  purchase. <span className="text-red-600">learn more</span>
+                </p>
+              </div>
+              <div className="cursor-pointer" onClick={() => handleCart()}>
+                <b>✕</b>
+              </div>
+            </div>
+            <br />
+            <div className="w-full flex flex-col items-start justify-start">
+              <div className="text-sm w-full flex flex-row items-center justify-between">
+                <p>
+                  <b>1 item</b>
+                </p>
+                <button>
+                  <b>clear all</b>
+                </button>
+              </div>
+            </div>
+            <br />
+            <div className="max-w-3xl max-h-48 overflow-y-scroll flex flex-row flex-wrap ">
+              {[1, 2, 3, 4, 5, 6].map(() => cartItem)}
+            </div>
+            <br />
+            <div className="w-full text-sm flex flex-row items-center justify-between">
+              <p>Total price</p>
+              <div>
+                <p>
+                  <b>92.02 ETH</b>
+                </p>
+                <p>$119.399.67</p>
+              </div>
+            </div>
+            <br />
+            <div className="w-full text-sm flex flex-col">
+              <div className="w-full flex flex-row items-center justify-between">
+                <p>Send asset to a 3rd party wallet address</p>
+                <button>∨</button>
+              </div>
+              <br />
+              <button className="w-full flex text-white flex-row items-center justify-center h-10 rounded-lg bg-[#CD313C]">
+                <b>Complete Purchase</b>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="flex flex-col w-full gap-5">
         <PurchaseCard
           genre="Afropop"
@@ -113,7 +192,7 @@ export const PurchasePage = () => {
           </button>
           <button
             className="py-3 w-full rounded-lg bg-[#FFD7D9] text-[#CD313C] hover:bg-[#CD313C] hover:text-red-100 font-Recoleta"
-            onClick={() => handleCartState()}
+            onClick={() => handleCart()}
           >
             Purchase
           </button>
